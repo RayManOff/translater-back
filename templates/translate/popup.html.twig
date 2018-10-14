@@ -1,2 +1,50 @@
-{{ text }}
-{{ translate }}
+<style>
+    .rayman_translate_popup {
+        border: 1px solid #777;
+        display: inline-block;
+        position: absolute !important;
+        z-index: 9999;
+        font: 14px/100% arial, sans-serif;
+        border-radius: 5px;
+    }
+    .to_translate_text {
+        min-width: 150px;
+        max-width: 300px;
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    .translated_text {
+        min-width: 150px;
+        max-width: 300px;
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    .close_translate_popup {
+        position: absolute;
+        text-decoration: none;
+        color: #777;
+        right: 8px;
+        top: 5px;
+    }
+    .translate_boundary {
+        width: 120px;
+        background: #777;
+    }
+</style>
+
+<div class="rayman_translate_popup">
+    <a href="#" class="close_translate_popup">x</a>
+    <div class="to_translate_text">
+        <span>
+            {{ text }}
+        </span>
+    </div>
+    <hr class="translate_boundary">
+    <div class="translated_text">
+        <span>
+            {{ translate }}
+        </span>
+    </div>
+</div>
